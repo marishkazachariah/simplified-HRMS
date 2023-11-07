@@ -11,10 +11,10 @@ public class HRSystem {
     private List<Recruiter> recruiters;
     private List<Applicant> applicants;
 
-    public HRSystem(List<JobPosition> jobPositions, List<Recruiter> recruiters, List<Applicant> applicants) {
-        this.jobPositions = jobPositions;
-        this.recruiters = recruiters;
-        this.applicants = applicants;
+    public HRSystem() {
+        this.jobPositions = new ArrayList<>();
+        this.recruiters = new ArrayList<>();
+        this.applicants = new ArrayList<>();
     }
 
     public List<JobPosition> getJobPositions() {
@@ -122,8 +122,6 @@ public class HRSystem {
                                     jobPosition.getLocation().equalsIgnoreCase(applicant.getPreferredLocation())
                     )
                     .findFirst();
-        } else {
-            System.err.println("Error retrieving job position");
         }
         return Optional.empty();
     }
