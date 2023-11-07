@@ -82,7 +82,7 @@ public class HRSystem {
 
 
         // Save report to text file
-        try (BufferedWriter writer = new BufferedWriter(new FileWriter("recruitment_reports.txt"))) {
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter("src/main/java/org/applicant_tracking_system/recruitment_reports.txt"))) {
             writer.write("***HR Report***\n");
 
             writer.write("Number of applicants per status\n");
